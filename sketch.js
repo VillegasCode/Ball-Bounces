@@ -9,17 +9,27 @@ function setup() {
   //frameRate(60);
 }
 
+let i = 0;
+let j = 0;
+
 function draw() {
   // put drawing code here
-     //background(200);
+     background(255,0,0);
      strokeWeight(10);
      stroke(255,0,0);
      fill("blue");
-     for(let i=0; i < 100; i++){
-      ellipse(random(width), random(height), 50,50);
-     }
+     if (i <= windowWidth || j <= windowHeight) {
+      //ellipse(random(width), random(height), 50,50);
+      ellipse(i,j,50,50)
+      i++;
+      j++;
+    }
+    else {
+      j = 0;
+      i = 0;
+    }
 }
-
+     
 function windowResized() {
       resizeCanvas(windowWidth,windowHeight);
       background(200);
