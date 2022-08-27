@@ -18,16 +18,32 @@ function draw() {
      strokeWeight(10);
      stroke(255,0,0);
      fill("blue");
-     if (i <= windowWidth || j <= windowHeight) {
+     if (i <= windowHeight || j <= windowHeight && step === 0) {
       //ellipse(random(width), random(height), 50,50);
-      ellipse(i,j,50,50)
       i++;
       j++;
+      if (j > windowHeight) {
+        step = 1;
+        j = windowHeight*1;
+        i = (windowWidth*0.5);
+      }
+      else {
+        step = 0;
+      }
     }
-    else {
-      j = 0;
-      i = 0;
+    else if (i <= windowHeight || j <= windowHeight && step === 1) {
+      i++;
+      j--;
+      if (i > windowWidth) {
+        step = 0;
+        j = 0;
+        i = 0;
+      }
+      else {
+        step = 1;
+      }
     }
+    ellipse(i,j,150,150)
 }
      
 function windowResized() {
