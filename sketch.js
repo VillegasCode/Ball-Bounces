@@ -12,29 +12,24 @@ function setup() {
 let i = 0;
 let j = 0;
 
+// Update the font like if was P5.JS let f = createFont("Arial", 36);
 function draw() {
-  // put drawing code here
-     background(255,0,0);
-     strokeWeight(10);
-     stroke(255,0,0);
-     fill("blue");
+    // put drawing code here
+     background(255,255,255); //background color
+     strokeWeight(10); //Size border of ball
+     stroke(255,0,0); // stroke color
+     fill("blue"); //color fill
      if (i <= windowHeight || j <= windowHeight && step === 0) {
-      //ellipse(random(width), random(height), 50,50);
       i++;
       j++;
-      if (j > windowHeight) {
+      if (j === windowHeight || i === windowWidth) {
         step = 1;
-        j = windowHeight*1;
-        i = (windowWidth*0.5);
-      }
-      else {
-        step = 0;
       }
     }
-    else if (i <= windowHeight || j <= windowHeight && step === 1) {
+    else if (i <= windowHeight+1 || j <= windowHeight+1 && step === 1) {
       i++;
       j--;
-      if (i > windowWidth) {
+      if (i >= windowWidth+75) {
         step = 0;
         j = 0;
         i = 0;
