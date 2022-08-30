@@ -1,16 +1,10 @@
 function setup() {
   // Create a CANVAS with WIDTH and HEIGHT of BROWSER
   createCanvas(windowWidth,windowHeight);
-
-  //Hidden cursor
-  //noCursor();
-
-  //DOWN FRAMERATE (Bajar los Cuadros por segundo) 60 como máximo
-  //frameRate(60);
 }
 
-let i = 0;
-let j = 0;
+let i = 0; //axis X
+let j = 0; //axis Y
 
 // Update the font like if was P5.JS let f = createFont("Arial", 36);
 function draw() {
