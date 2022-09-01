@@ -60,6 +60,16 @@ function draw() {
             i++;
             j++;
           }
+          else if (borderHorizontal === 0 && borderVertical === 1 && i <= wBall/2) {
+            borderVertical = 0;
+            i++;
+            j--;
+          } else if (i > (windowWidth - (wBall/2)+2) || j > (windowHeight - (wBall/2)+2) || i < wBall/2 || j < wBall/2){
+            borderHorizontal = 0;
+            borderVertical = 0;
+            i = wBall/2;
+            j = wBall/2;
+          }
     ellipse(i,j,wBall,wBall);
     text("Position i: " + i, 50, 20);
     text("Position j: " + j, 50, 45);
