@@ -11,7 +11,7 @@ let borderVertical = 0; //Switch to bounce when hit with a vertical border
 // Update the font like if was P5.JS let f = createFont("Arial", 36);
 function draw() {
     // put drawing code here
-     background(255,255,255); //background color
+     background("cadetblue"); //background color
      strokeWeight(10); //Size border of ball
      stroke(255,0,0); // stroke color
      fill("blue"); //color fill
