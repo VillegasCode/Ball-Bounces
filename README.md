@@ -1,3 +1,3 @@
-# GameProject-1
-I'll create a game of collision
+# Ball Bounces
+It's a ball that bounces with edges of our browser
 This is a test of sync between GitHub and GIT
