@@ -11,10 +11,10 @@ let borderVertical = 0; //Switch to bounce when hit with a vertical border
 // Update the font like if was P5.JS let f = createFont("Arial", 36);
 function draw() {
     // put drawing code here
-     background("cadetblue"); //background color
+     background(15, 123, 15); //background color
      strokeWeight(10); //Size border of ball
      stroke(255,0,0); // stroke color
-     fill("blue"); //color fill
+     fill("red"); //color fill
      if (j <= windowHeight-(wBall/2) && j >= wBall/2 && i < windowWidth-(wBall/2) && i >= wBall/2 && borderHorizontal === 0 && borderVertical === 0) {
       i++;
       j++;
@@ -71,12 +71,15 @@ function draw() {
             j = wBall/2;
           }
     ellipse(i,j,wBall,wBall);
-    text("Position i: " + i, 50, 20);
-    text("Position j: " + j, 50, 45);
-    text("windowWidth - (wBall/2): " + (windowWidth - (wBall/2)), 50, 70);
+    stroke("white");
+    fill("black");
+    text("-----INDICATORS-----", 50, 20);
+    text("Position i: " + i, 50, 45);
+    text("Position j: " + j, 50, 70);
+    text("windowWidth - (wBall/2): " + (windowWidth - (wBall/2)), 50, 95);
     text("windowHeight - (wBall/2): " + (windowHeight - (wBall/2)), 50, 120);
-    text("borderHorizontal: " + borderHorizontal, 50, 170);
-    text("borderVertical: " + borderVertical, 50, 220);
+    text("borderHorizontal: " + borderHorizontal, 50, 145);
+    text("borderVertical: " + borderVertical, 50, 170);
     }   
 function windowResized() {
       resizeCanvas(windowWidth,windowHeight);
